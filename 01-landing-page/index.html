@@ -3,11 +3,447 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мій перший лендінг</title>
+    <title>Aroma — Кав'ярня з душею</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Привіт, світ!</h1>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#" class="logo">
+                <span class="logo__icon">&#9749;</span>
+                <span class="logo__text">Aroma</span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#about" class="nav__link">Про нас</a>
+                <a href="#menu" class="nav__link">Меню</a>
+                <a href="#gallery" class="nav__link">Атмосфера</a>
+                <a href="#reviews" class="nav__link">Відгуки</a>
+                <a href="#contact" class="nav__link">Контакти</a>
+            </nav>
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero__overlay"></div>
+        <div class="container hero__content">
+            <p class="hero__subtitle">Ласкаво просимо до</p>
+            <h1 class="hero__title">Aroma</h1>
+            <p class="hero__desc">Кава, що пробуджує натхнення.<br>Атмосфера, в якій народжуються ідеї.</p>
+            <div class="hero__actions">
+                <a href="#menu" class="btn btn--primary">Переглянути меню</a>
+                <a href="#contact" class="btn btn--outline">Забронювати столик</a>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <span>Гортай вниз</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about">
+        <div class="container about__inner">
+            <div class="about__image">
+                <div class="about__image-placeholder">
+                    <span>&#9749;</span>
+                </div>
+                <div class="about__badge">
+                    <span class="about__badge-number">7+</span>
+                    <span class="about__badge-text">років досвіду</span>
+                </div>
+            </div>
+            <div class="about__content">
+                <p class="section__label">Про нас</p>
+                <h2 class="section__title">Кава — це мистецтво,<br>а ми — його майстри</h2>
+                <p class="about__text">
+                    Ми почали з маленької кав'ярні на розі вулиці, а сьогодні Aroma — це місце,
+                    куди приходять за натхненням. Ми самі обсмажуємо зерна, подорожуємо плантаціями
+                    та створюємо унікальні бленди, щоб кожна чашка була особливою.
+                </p>
+                <div class="about__features">
+                    <div class="about__feature">
+                        <div class="about__feature-icon">&#127793;</div>
+                        <div>
+                            <h4>Свіже обсмаження</h4>
+                            <p>Зерна обсмажуються щотижня для найкращого смаку</p>
+                        </div>
+                    </div>
+                    <div class="about__feature">
+                        <div class="about__feature-icon">&#127758;</div>
+                        <div>
+                            <h4>Пряма закупівля</h4>
+                            <p>Зерна з ферм Ефіопії, Колумбії та Бразилії</p>
+                        </div>
+                    </div>
+                    <div class="about__feature">
+                        <div class="about__feature-icon">&#10084;&#65039;</div>
+                        <div>
+                            <h4>З любов'ю</h4>
+                            <p>Кожну чашку готують досвідчені бариста</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu section" id="menu">
+        <div class="container">
+            <p class="section__label section__label--center">Наше меню</p>
+            <h2 class="section__title section__title--center">Обирай свій смак</h2>
+
+            <div class="menu__tabs">
+                <button class="menu__tab active" data-tab="coffee">Кава</button>
+                <button class="menu__tab" data-tab="tea">Чай</button>
+                <button class="menu__tab" data-tab="desserts">Десерти</button>
+                <button class="menu__tab" data-tab="food">Їжа</button>
+            </div>
+
+            <div class="menu__grid" id="menu-grid">
+                <!-- Coffee -->
+                <div class="menu__card" data-category="coffee">
+                    <div class="menu__card-emoji">&#9749;</div>
+                    <h3 class="menu__card-title">Еспресо</h3>
+                    <p class="menu__card-desc">Класичний подвійний еспресо з насиченим смаком</p>
+                    <span class="menu__card-price">55 грн</span>
+                </div>
+                <div class="menu__card" data-category="coffee">
+                    <div class="menu__card-emoji">&#9749;</div>
+                    <h3 class="menu__card-title">Капучіно</h3>
+                    <p class="menu__card-desc">Еспресо з ніжною молочною пінкою та корицею</p>
+                    <span class="menu__card-price">75 грн</span>
+                </div>
+                <div class="menu__card" data-category="coffee">
+                    <div class="menu__card-emoji">&#9749;</div>
+                    <h3 class="menu__card-title">Латте</h3>
+                    <p class="menu__card-desc">М'який смак кави з великою порцією молока</p>
+                    <span class="menu__card-price">80 грн</span>
+                </div>
+                <div class="menu__card" data-category="coffee">
+                    <div class="menu__card-emoji">&#129380;</div>
+                    <h3 class="menu__card-title">Раф</h3>
+                    <p class="menu__card-desc">Вершковий кавовий напій з ванільним сиропом</p>
+                    <span class="menu__card-price">90 грн</span>
+                </div>
+                <div class="menu__card" data-category="coffee">
+                    <div class="menu__card-emoji">&#127846;</div>
+                    <h3 class="menu__card-title">Flat White</h3>
+                    <p class="menu__card-desc">Подвійний еспресо з шовковистою мікропіною</p>
+                    <span class="menu__card-price">85 грн</span>
+                </div>
+                <div class="menu__card" data-category="coffee">
+                    <div class="menu__card-emoji">&#129526;</div>
+                    <h3 class="menu__card-title">Cold Brew</h3>
+                    <p class="menu__card-desc">Кава холодного заварювання протягом 12 годин</p>
+                    <span class="menu__card-price">95 грн</span>
+                </div>
+
+                <!-- Tea -->
+                <div class="menu__card hidden" data-category="tea">
+                    <div class="menu__card-emoji">&#127861;</div>
+                    <h3 class="menu__card-title">Зелений чай</h3>
+                    <p class="menu__card-desc">Преміум зелений чай з жасмином</p>
+                    <span class="menu__card-price">60 грн</span>
+                </div>
+                <div class="menu__card hidden" data-category="tea">
+                    <div class="menu__card-emoji">&#127861;</div>
+                    <h3 class="menu__card-title">Чай Ерл Грей</h3>
+                    <p class="menu__card-desc">Чорний чай з бергамотом та лимоном</p>
+                    <span class="menu__card-price">55 грн</span>
+                </div>
+                <div class="menu__card hidden" data-category="tea">
+                    <div class="menu__card-emoji">&#127861;</div>
+                    <h3 class="menu__card-title">Матча Латте</h3>
+                    <p class="menu__card-desc">Японський зелений чай матча з молоком</p>
+                    <span class="menu__card-price">90 грн</span>
+                </div>
+                <div class="menu__card hidden" data-category="tea">
+                    <div class="menu__card-emoji">&#127810;</div>
+                    <h3 class="menu__card-title">Трав'яний чай</h3>
+                    <p class="menu__card-desc">М'ята, ромашка та мелiса з медом</p>
+                    <span class="menu__card-price">50 грн</span>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu__card hidden" data-category="desserts">
+                    <div class="menu__card-emoji">&#127856;</div>
+                    <h3 class="menu__card-title">Чізкейк</h3>
+                    <p class="menu__card-desc">Ніжний чізкейк з ягідним соусом</p>
+                    <span class="menu__card-price">120 грн</span>
+                </div>
+                <div class="menu__card hidden" data-category="desserts">
+                    <div class="menu__card-emoji">&#129473;</div>
+                    <h3 class="menu__card-title">Тірамісу</h3>
+                    <p class="menu__card-desc">Класичний італійський десерт з маскарпоне</p>
+                    <span class="menu__card-price">130 грн</span>
+                </div>
+                <div class="menu__card hidden" data-category="desserts">
+                    <div class="menu__card-emoji">&#127850;</div>
+                    <h3 class="menu__card-title">Круасан</h3>
+                    <p class="menu__card-desc">Свіжий масляний круасан з шоколадом</p>
+                    <span class="menu__card-price">65 грн</span>
+                </div>
+                <div class="menu__card hidden" data-category="desserts">
+                    <div class="menu__card-emoji">&#127848;</div>
+                    <h3 class="menu__card-title">Еклер</h3>
+                    <p class="menu__card-desc">Французький еклер з кремом та глазур'ю</p>
+                    <span class="menu__card-price">75 грн</span>
+                </div>
+
+                <!-- Food -->
+                <div class="menu__card hidden" data-category="food">
+                    <div class="menu__card-emoji">&#129386;</div>
+                    <h3 class="menu__card-title">Авокадо тост</h3>
+                    <p class="menu__card-desc">Тост з авокадо, яйцем пашот та мікрозеленню</p>
+                    <span class="menu__card-price">145 грн</span>
+                </div>
+                <div class="menu__card hidden" data-category="food">
+                    <div class="menu__card-emoji">&#129366;</div>
+                    <h3 class="menu__card-title">Боул з лососем</h3>
+                    <p class="menu__card-desc">Рис, лосось, авокадо, едамаме та соус поке</p>
+                    <span class="menu__card-price">195 грн</span>
+                </div>
+                <div class="menu__card hidden" data-category="food">
+                    <div class="menu__card-emoji">&#127798;</div>
+                    <h3 class="menu__card-title">Сендвіч</h3>
+                    <p class="menu__card-desc">Чіабата з індичкою, моцарелою та песто</p>
+                    <span class="menu__card-price">135 грн</span>
+                </div>
+                <div class="menu__card hidden" data-category="food">
+                    <div class="menu__card-emoji">&#129367;</div>
+                    <h3 class="menu__card-title">Гранола</h3>
+                    <p class="menu__card-desc">Домашня гранола з йогуртом та сезонними ягодами</p>
+                    <span class="menu__card-price">110 грн</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery section" id="gallery">
+        <div class="container">
+            <p class="section__label section__label--center">Атмосфера</p>
+            <h2 class="section__title section__title--center">Місце, де хочеться залишитись</h2>
+            <div class="gallery__grid">
+                <div class="gallery__item gallery__item--large">
+                    <div class="gallery__placeholder" style="background: linear-gradient(135deg, #8B6914, #D4A843);">
+                        <span>&#9749; Затишний зал</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <div class="gallery__placeholder" style="background: linear-gradient(135deg, #6B4423, #A0522D);">
+                        <span>&#127843; Наші десерти</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <div class="gallery__placeholder" style="background: linear-gradient(135deg, #4A6741, #7B9971);">
+                        <span>&#127793; Літня тераса</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <div class="gallery__placeholder" style="background: linear-gradient(135deg, #5D4037, #8D6E63);">
+                        <span>&#127847; Бариста за роботою</span>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--wide">
+                    <div class="gallery__placeholder" style="background: linear-gradient(135deg, #3E2723, #6D4C41);">
+                        <span>&#127769; Вечірня атмосфера</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container stats__inner">
+            <div class="stats__item">
+                <span class="stats__number" data-target="15000">0</span>
+                <span class="stats__label">Чашок на місяць</span>
+            </div>
+            <div class="stats__item">
+                <span class="stats__number" data-target="12">0</span>
+                <span class="stats__label">Сортів зерен</span>
+            </div>
+            <div class="stats__item">
+                <span class="stats__number" data-target="4800">0</span>
+                <span class="stats__label">Задоволених гостей</span>
+            </div>
+            <div class="stats__item">
+                <span class="stats__number" data-target="7">0</span>
+                <span class="stats__label">Років з вами</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews section" id="reviews">
+        <div class="container">
+            <p class="section__label section__label--center">Відгуки</p>
+            <h2 class="section__title section__title--center">Що кажуть наші гості</h2>
+            <div class="reviews__slider" id="reviews-slider">
+                <div class="reviews__track" id="reviews-track">
+                    <div class="reviews__card">
+                        <div class="reviews__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p class="reviews__text">"Найкраща кава у місті! Капучіно тут просто неймовірний, а атмосфера — затишна і натхненна. Приходжу сюди кожного ранку."</p>
+                        <div class="reviews__author">
+                            <div class="reviews__avatar">ОК</div>
+                            <div>
+                                <strong>Олена Коваленко</strong>
+                                <span>Постійна гостя</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__card">
+                        <div class="reviews__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p class="reviews__text">"Відкрив для себе Aroma випадково і тепер не уявляю ранку без їхнього флет-вайту. Бариста — справжні професіонали своєї справи!"</p>
+                        <div class="reviews__author">
+                            <div class="reviews__avatar">ДМ</div>
+                            <div>
+                                <strong>Дмитро Мельник</strong>
+                                <span>Кавоман</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__card">
+                        <div class="reviews__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p class="reviews__text">"Чудове місце для роботи та зустрічей! Wi-Fi швидкий, кава смачна, десерти — окрема поезія. Тірамісу тут — найкраще, що я пробувала."</p>
+                        <div class="reviews__author">
+                            <div class="reviews__avatar">АС</div>
+                            <div>
+                                <strong>Анна Сидоренко</strong>
+                                <span>Фрілансерка</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__controls">
+                    <button class="reviews__btn" id="prev-review" aria-label="Попередній">&#8592;</button>
+                    <div class="reviews__dots" id="reviews-dots"></div>
+                    <button class="reviews__btn" id="next-review" aria-label="Наступний">&#8594;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+        <div class="container contact__inner">
+            <div class="contact__info">
+                <p class="section__label">Контакти</p>
+                <h2 class="section__title">Завітайте до нас</h2>
+                <p class="contact__text">Ми завжди раді бачити вас у нашій кав'ярні. Забронюйте столик або просто зайдіть на каву!</p>
+                <div class="contact__details">
+                    <div class="contact__detail">
+                        <span class="contact__detail-icon">&#128205;</span>
+                        <div>
+                            <strong>Адреса</strong>
+                            <p>вул. Хрещатик, 22, Київ</p>
+                        </div>
+                    </div>
+                    <div class="contact__detail">
+                        <span class="contact__detail-icon">&#128222;</span>
+                        <div>
+                            <strong>Телефон</strong>
+                            <p>+380 (44) 123-45-67</p>
+                        </div>
+                    </div>
+                    <div class="contact__detail">
+                        <span class="contact__detail-icon">&#128338;</span>
+                        <div>
+                            <strong>Графік роботи</strong>
+                            <p>Пн-Пт: 7:30 - 22:00<br>Сб-Нд: 9:00 - 23:00</p>
+                        </div>
+                    </div>
+                    <div class="contact__detail">
+                        <span class="contact__detail-icon">&#128231;</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>hello@aroma.cafe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact__form-wrapper">
+                <h3 class="contact__form-title">Забронювати столик</h3>
+                <form class="contact__form" id="booking-form">
+                    <div class="form__group">
+                        <input type="text" class="form__input" placeholder="Ваше ім'я" required>
+                    </div>
+                    <div class="form__group">
+                        <input type="tel" class="form__input" placeholder="Телефон" required>
+                    </div>
+                    <div class="form__row">
+                        <div class="form__group">
+                            <input type="date" class="form__input" required>
+                        </div>
+                        <div class="form__group">
+                            <input type="time" class="form__input" required>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <select class="form__input" required>
+                            <option value="" disabled selected>Кількість гостей</option>
+                            <option value="1">1 гість</option>
+                            <option value="2">2 гості</option>
+                            <option value="3">3 гості</option>
+                            <option value="4">4 гості</option>
+                            <option value="5+">5+ гостей</option>
+                        </select>
+                    </div>
+                    <div class="form__group">
+                        <textarea class="form__input form__textarea" placeholder="Побажання (необов'язково)" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Забронювати</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="#" class="logo">
+                        <span class="logo__icon">&#9749;</span>
+                        <span class="logo__text">Aroma</span>
+                    </a>
+                    <p class="footer__desc">Кава з душею у серці Києва. Ми створюємо не просто напої — ми створюємо моменти.</p>
+                </div>
+                <div class="footer__links">
+                    <h4>Навігація</h4>
+                    <a href="#about">Про нас</a>
+                    <a href="#menu">Меню</a>
+                    <a href="#gallery">Атмосфера</a>
+                    <a href="#reviews">Відгуки</a>
+                    <a href="#contact">Контакти</a>
+                </div>
+                <div class="footer__links">
+                    <h4>Соцмережі</h4>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Telegram</a>
+                    <a href="#">TikTok</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Aroma. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
